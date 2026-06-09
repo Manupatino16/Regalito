@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Te Amo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 10c-3.7 0-7 3.3-7 7 0 4.7 3.5 8.7 7 12.6 3.5-3.9 7-7.9 7-12.6 0-3.7-3.3-7-7-7z' fill='%23ff3b6b'/%3E%3Cpath d='M20 24c0 8.8 7.2 16 16 16s16-7.2 16-16c0-5.3-2.7-10.7-7-12.6-1.4 3.4-4 6.2-8.5 9.6-4.5-3.4-7.1-6.2-8.5-9.6C22.7 13.3 20 18.7 20 24z' fill='%23ff5c7d'/%3E%3Cpath d='M22 14c2.2-4 5.5-6 8.5-6 1.4 0 2.7.4 3.9 1.2-1.7 2.6-2.4 5.2-2.1 7.8-2.9-1.2-5.5-2.7-7.8-4.8z' fill='%23ffb347'/%3E%3Cpath d='M36 10c-1.2 4.1.1 7.7 2.4 10.7 1.8-3.1 4.8-5.7 8.1-7.3-1.6-3-4.2-5.2-7.5-6.2-.8 1.3-1.9 2.6-2.9 3.8z' fill='%23ff8a2d'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars-bg"></div>
+  
+  <main class="container">
+    <!-- Sección del Regalo -->
+    <section class="gift-section">
+      <div class="gift-box" id="giftBox">
+        <div class="gift-box-lid" id="giftLid"></div>
+        <div class="gift-box-body"></div>
+        <div class="gift-ribbon-h"></div>
+        <div class="gift-ribbon-v"></div>
+        <div class="gift-bow"></div>
+        <p class="gift-text">Click aquí</p>
+      </div>
+      <p class="gift-subtitle">Abre tu regalo</p>
+    </section>
+
+    <!-- Contenido Principal (inicialmente oculto) -->
+    <div class="content-wrapper" id="contentWrapper">
+      <!-- Sección de Título y Carta -->
+      <div class="love-section">
+        <h1 class="love-title">Mi Vida</h1>
+        <div class="letter-container">
+          <div class="letter-header">💌 Una carta para ti</div>
+          <div id="letterDisplay" class="letter-display" data-placeholder="Aquí aparecerá tu carta de amor..."></div>
+        </div>
+      </div>
+
+      <!-- Sección del Reloj de Tiempo -->
+      <div class="time-section">
+        <h2 class="section-title">⏱️ Tiempo Juntas</h2>
+        <div class="time-counter">
+          <div class="time-unit">
+            <span class="time-value" id="days">0</span>
+            <span class="time-label">Días</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit">
+            <span class="time-value" id="hours">0</span>
+            <span class="time-label">Horas</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit">
+            <span class="time-value" id="minutes">0</span>
+            <span class="time-label">Min</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit">
+            <span class="time-value" id="seconds">0</span>
+            <span class="time-label">Seg</span>
+          </div>
+        </div>
+        <div class="date-selector">
+          <div class="fixed-date">Comenzamos: <strong>9 de febrero de 2026</strong></div>
+          <p class="date-note">Esta fecha está fija como nuestro inicio, y la cuenta atrás muestra cada día juntos desde entonces.</p>
+        </div>
+      </div>
+
+      <!-- Sección del Mapa -->
+      <div class="map-section">
+        <h2 class="section-title">🗺️ Mapa de nuestro amor</h2>
+        <div class="map-note">
+          <p>Ella en <strong>Bugalagrande</strong> (Valle del Cauca) y yo en <strong>Sonsón</strong> (Antioquia).</p>
+          <p>Puede que nos separen kilómetros, pero en mi corazón siempre estás cerca. No es fácil tenerte lejos, sin embargo siento que estamos más unidas que nunca, y me llena de gratitud saber que un día esos kilómetros se convertirán en centímetros entre las dos.</p>
+        </div>
+        <div class="map-wrapper">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=Bugalagrande,+Valle+del+Cauca+to+Sons%C3%B3n,+Antioquia&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <a
+              href="https://www.google.com/maps/dir/Bugalagrande,+Valle+del+Cauca/Sons%C3%B3n,+Antioquia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="map-link-overlay"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+        <div class="distance-summary">
+          <span id="cityPairText">Bugalagrande ↔ Sonsón</span>
+          <span id="distanceValue">227 km</span>
+        </div>
+      </div>
+
+      <!-- Sección del Mini Juego -->
+      <div class="game-section">
+        <h2 class="section-title">🌸 Mini juego: atrapa las flores</h2>
+        <p class="game-instructions">Usa las flechas del teclado o toca y mueve el florero para atrapar 9 flores. En la última, te doy un beso.</p>
+        <div class="game-board">
+          <div class="game-area" id="gameArea">
+            <div class="vase" id="vase">
+              <div class="vase-badge">💐</div>
+            </div>
+            <div class="final-scene" id="finalScene">
+              <div class="girl">😽</div>
+              <div class="kiss-bubble">¡Por la última flor, un beso! ❤️</div>
+            </div>
+          </div>
+          <div class="game-footer">
+            <div class="game-status" id="gameStatus">Flores atrapadas: <span id="flowersCaught">0</span>/9</div>
+            <button id="startGameBtn" class="btn-secondary">Iniciar juego</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón flotante para volver -->
+      <button id="backBtn" class="btn-back">← Volver al regalo</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
